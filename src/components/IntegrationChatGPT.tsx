@@ -6,7 +6,7 @@ import { Input } from 'antd';
 const { Search } = Input;
 
 const configuration = new Configuration({
-    apiKey: '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',
+    apiKey: '',
 });
 
 const openai = new OpenAIApi(configuration);
