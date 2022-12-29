@@ -6,12 +6,13 @@ import { Input } from 'antd';
 const { Search } = Input;
 
 const configuration = new Configuration({
-    apiKey: '',
+    apiKey: import.meta.env.VITE_REACT_APP_OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
 
 function ConnectOpenIA() {
+    console.log();
     const [query, setQuery] = useState<string>('');
     const [data, setData] = useState<string>('');
 
@@ -24,7 +25,6 @@ function ConnectOpenIA() {
         });
 
         if (response.data.choices[0].text) {
-            console.log(response.data.choices[0].text);
             setData(response.data.choices[0].text);
         } else {
             setData("Ocorreu um erro inesperado.");

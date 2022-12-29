@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import ConnectOpenIA from './components/IntegrationChatGPT';
 
 function App() {
